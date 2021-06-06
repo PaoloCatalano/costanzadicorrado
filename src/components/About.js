@@ -3,25 +3,34 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Title from "./Title"
 const About = () => {
-  const {
-    instaNode: {
-      localFile: { childImageSharp },
-      caption,
-    },
-  } = useStaticQuery(graphql`
+  // const {
+  //   instaNode: {
+  //     localFile: { childImageSharp },
+  //     caption,
+  //   },
+  // } = useStaticQuery(graphql`
+  //   {
+  //     instaNode(id: { eq: "CLO-138lqBj" }) {
+  //       localFile {
+  //         childImageSharp {
+  //           gatsbyImageData(
+  //             layout: FIXED
+  //             width: 350
+  //             placeholder: TRACED_SVG
+  //             height: 500
+  //           )
+  //         }
+  //       }
+  //       caption
+  //     }
+  //   }
+  // `)
+  const data = useStaticQuery(graphql`
     {
-      instaNode(id: { eq: "CLO-138lqBj" }) {
-        localFile {
-          childImageSharp {
-            gatsbyImageData(
-              layout: FIXED
-              width: 350
-              placeholder: TRACED_SVG
-              height: 500
-            )
-          }
+      file(relativePath: { eq: "profile.webp" }) {
+        childImageSharp {
+          gatsbyImageData
         }
-        caption
       }
     }
   `)
@@ -30,8 +39,8 @@ const About = () => {
       <div className="container-center">
         <div>
           <GatsbyImage
-            image={getImage(childImageSharp)}
-            alt={caption}
+            image={getImage(data.file.childImageSharp)}
+            alt="costanza dicorrado"
             className="about-pic"
           />
           <div style={{ flexDirection: "column" }}>
