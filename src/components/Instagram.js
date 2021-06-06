@@ -9,11 +9,7 @@ import { FaInstagram } from "react-icons/fa"
 const Instagram = () => {
   const data = useStaticQuery(graphql`
     {
-      allInstaNode(
-        limit: 3
-        sort: { fields: timestamp, order: DESC }
-        filter: {}
-      ) {
+      allInstaNode(limit: 3, sort: { fields: timestamp, order: DESC }) {
         nodes {
           id
           caption

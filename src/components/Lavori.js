@@ -22,7 +22,7 @@ const Lavori = () => {
               Instagram
             </a>
           </h4>
-          <Instagram />
+          {/* <Instagram /> */}
         </div>
       </div>
     </section>
