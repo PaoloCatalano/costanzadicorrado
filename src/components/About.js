@@ -29,7 +29,7 @@ const About = () => {
     {
       file(relativePath: { eq: "profile.webp" }) {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(quality: 100)
         }
       }
     }

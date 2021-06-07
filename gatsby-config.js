@@ -1,15 +1,10 @@
-/**
- * CONTENTFUL
- *
- *
- */
 require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 
 const siteMetadata = {
   title: "Costanza Dicorrado",
   titleTemplate: "%s · Make Up Artist",
-  description: "Il sito di Costanza Dicorrado",
-  siteUrl: "https://costanzadicorrado.netlify.app", // No trailing slash allowed!
+  description: "Il sito di Costanza Dicorrado - Make Up Artist",
+  siteUrl: "https://www.costanzadicorrado.com", // No trailing slash allowed!
   image: "/cdp.jpg", // Path to your image you placed in the 'static' folder
   twitterUsername: "@PaoroCatarano",
   siteLanguage: `it`,
@@ -54,6 +49,12 @@ module.exports = {
     //     username: `4568723168`,
     //   },
     // },
+    {
+      resolve: `gatsby-source-instagram-all`,
+      options: {
+        access_token: process.env.INSTAGRAM_ACCESS_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-source-contentful`,
       options: {

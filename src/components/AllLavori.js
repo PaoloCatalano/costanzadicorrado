@@ -27,7 +27,7 @@ const Projects = ({ projects: data = [] }) => {
 
           return (
             <article key={ordine}>
-              <div style={{ textAlign: "left" }}>{categoria}</div>
+              <div className="categoria-info">{categoria}</div>
               <div style={{ position: "relative" }}>
                 <GatsbyImage
                   image={getImage(foto.gatsbyImageData)}

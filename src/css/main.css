@@ -1583,7 +1583,7 @@ popup
   }
 }
 .search-buttons section button {
-  margin: 0 0.5rem;
+  margin: 0.5rem;
   background-color: var(--white);
   color: var(--primary-0) !important;
 }
@@ -1602,4 +1602,9 @@ popup
   font-weight: bold;
   background-color: var(--primary-0-transparent);
   color: var(--white);
+}
+.categoria-info {
+  text-align: left;
+  color: var(--primary-0);
+  font-weight: bold;
 }

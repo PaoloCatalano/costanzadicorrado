@@ -25,6 +25,7 @@
     "gatsby-source-contentful": "^5.4.0",
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-source-instagram": "^0.9.0",
+    "gatsby-source-instagram-all": "^4.2.0",
     "gatsby-transformer-sharp": "^3.4.0",
     "react": "^17.0.1",
     "react-cookie-consent": "^6.2.3",

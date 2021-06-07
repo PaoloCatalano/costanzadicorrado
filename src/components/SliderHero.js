@@ -32,7 +32,11 @@ const SliderHero = () => {
           ordine
           titolo
           image: foto {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              quality: 100
+            )
           }
         }
       }
