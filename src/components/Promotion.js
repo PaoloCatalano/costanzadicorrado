@@ -20,7 +20,7 @@ const Popup = () => {
       style={comStyle}
       contentStyle={{ margin: 0 }}
       buttonStyle={acceptButtonStyle}
-      expires={7}
+      expires={14}
       cookieName="promozione"
       flipButtons
       ariaAcceptLabel

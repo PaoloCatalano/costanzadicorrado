@@ -3,8 +3,31 @@ import Form from "./Form"
 import { IoIosMail } from "react-icons/io"
 import { ImLocation } from "react-icons/im"
 import Title from "./Title"
+import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Contatti = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allContentfulFotoContatti(sort: { fields: ordine, order: ASC }) {
+        nodes {
+          foto {
+            gatsbyImageData(
+              quality: 100
+              placeholder: TRACED_SVG
+              layout: CONSTRAINED
+            )
+            id
+          }
+        }
+      }
+    }
+  `)
+
+  const {
+    allContentfulFotoContatti: { nodes },
+  } = data
+
   return (
     <div className="container" id="contatti">
       <Title title="contattami" />
@@ -26,6 +49,29 @@ const Contatti = () => {
             </div>
           </div>
         </article>
+        <div
+          style={{
+            margin: "2rem auto",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            gap: "2rem",
+            alignItems: "center",
+          }}
+        >
+          {nodes.map(pic => {
+            return (
+              <div key={pic.foto.id} style={{ maxWidth: "475px" }}>
+                <GatsbyImage
+                  image={getImage(pic.foto)}
+                  alt={`costanza dicorrado ${pic.foto.id}`}
+                  className="contatti-pic"
+                  style={{ borderRadius: "1rem" }}
+                />
+              </div>
+            )
+          })}
+        </div>
       </section>
     </div>
   )

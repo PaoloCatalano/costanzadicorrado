@@ -15,11 +15,11 @@ const Sidebar = ({ handleClick }) => {
         <a href="#home" onClick={handleClick}>
           <StaticImage
             href="#home"
-            src="../assets/images/cdp.jpg"
+            src="../assets/images/cdb.png"
             alt="Costanza Dicorrado Logo"
             placeholder="tracedSVG"
             layout="fixed"
-            height={200}
+            width={200}
             className="img"
             quality="100"
             style={{ margin: "0 auto" }}

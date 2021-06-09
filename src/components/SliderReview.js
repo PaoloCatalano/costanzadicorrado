@@ -22,8 +22,14 @@ const SliderReview = () => {
       {reviews.map(review => {
         const { id, icon, name, text } = review
         return (
-          <div key={id} className="review">
-            <img className="user" src={icon} alt={name} />
+          <div key={id} className="review" itemProp="itemReviewed">
+            <img
+              className="user"
+              src={icon}
+              width="50px"
+              height="50px"
+              alt={name}
+            />
             <h4 itemProp="author">{name}</h4>
             <p className="testo" itemProp="reviewBody">
               {text}

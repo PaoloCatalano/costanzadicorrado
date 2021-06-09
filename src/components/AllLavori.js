@@ -31,7 +31,7 @@ const Projects = ({ projects: data = [] }) => {
               <div style={{ position: "relative" }}>
                 <GatsbyImage
                   image={getImage(foto.gatsbyImageData)}
-                  alt={`Costanza Dicorrado ha truccato ${titolo}, categoria: ${categoria}`}
+                  alt={`Costanza Dicorrado ha truccato ${titolo}, categoria trucco: ${categoria}`}
                   className="img"
                 />
                 {/* <img src={foto} alt={titolo} style={{ maxWidth: 500 }} /> */}

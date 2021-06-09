@@ -1,9 +1,10 @@
 require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 
 const siteMetadata = {
-  title: "Costanza Dicorrado",
-  titleTemplate: "%s · Make Up Artist",
-  description: "Il sito di Costanza Dicorrado - Make Up Artist",
+  title: "COSTANZA DICORRADO",
+  titleTemplate: "%s · Make Up Artist Catania | Beauty Content Creator",
+  description:
+    "Disponibile per Servizi Make Up in tutta Italia: Trucco Sposa, 18°, Cerimonie, Beauty, Fashion, Fotografico, Shooting, Cinematografico, Teatrale, Artistico, Body Painting.",
   siteUrl: "https://www.costanzadicorrado.com", // No trailing slash allowed!
   image: "/cdp.jpg", // Path to your image you placed in the 'static' folder
   twitterUsername: "@PaoroCatarano",

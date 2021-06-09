@@ -45,7 +45,7 @@ const About = () => {
           />
           <div style={{ flexDirection: "column" }}>
             <Title title="about me" />
-            <p>
+            <p style={{ textAlign: "justify" }}>
               Sono giovane ma con le idee chiare e tanta voglia di fare! Infatti
               dopo la maturità classica al Convitto Cutelli di Catania, ho
               iniziato un periodo ricco di formazione ed esperienze che

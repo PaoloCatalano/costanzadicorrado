@@ -37,8 +37,12 @@ const SEO = ({ title, description, image, article }) => {
       titleTemplate={titleTemplate}
       htmlAttributes={{ lang: "it" }}
     >
+      <link rel="alternate" hreflang="it" href={`${siteUrl}`} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
+      <image url={seo.image} name="Costanza Dicorrado" />
+      <meta name="xml:lang" content="it" />
+      <meta name="xmlns" content="http://www.w3.org/1999/xhtml" />
       <meta
         name="keywords"
         content={`make up artist, Catania, Sicilia, ${servizi}`}

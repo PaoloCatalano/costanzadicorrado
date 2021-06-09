@@ -14,13 +14,10 @@ const Lavori = ({ data }) => {
   return (
     <>
       <NavSpecial />
-      <Seo
-        title="I Lavori di Costanza Dicorrado"
-        description="I vari lavori di Costanza Dicorrado suddivisi in varie categorie"
-      />
+      <Seo title="I Lavori di Costanza Dicorrado" />
       <main className="second-page">
         {/* <div className="container"> */}
-        <Title title="I miei LAvori" />
+        <Title title="I miei Lavori" />
         <AllLavori projects={nodes} />
         <div className="container">
           <Link to="/" className="btn">

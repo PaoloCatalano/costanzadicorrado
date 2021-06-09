@@ -1,5 +1,5 @@
 import female from "../images/user-female.png"
-// import male from "../images/user-male.png"
+import male from "../images/user-male.png"
 import React from "react"
 import { MdFormatQuote } from "react-icons/md"
 const data = [
@@ -43,10 +43,10 @@ const data = [
       <>
         <MdFormatQuote className="icon" />
         <i>
-          È stato molto facile affidarmi affidarmi sua professionalità e
-          bravura. Ragazza dolcissima, con una grande conoscenza in fatto di
-          makeup e su come esaltare i tratti del viso di ogni ragazza. Trucco
-          finale stupendo e perfetto per il tema scelto.
+          È stato molto facile affidarmi alla sua professionalità e bravura.
+          Ragazza dolcissima, con una grande conoscenza in fatto di makeup e su
+          come esaltare i tratti del viso di ogni ragazza. Trucco finale
+          stupendo e perfetto per il tema scelto.
         </i>{" "}
         ❤
         <MdFormatQuote className="icon" />
@@ -66,6 +66,24 @@ const data = [
           rimarrete molto contente.
         </i>
         😊💄💋
+        <MdFormatQuote className="icon" />
+      </>
+    ),
+  },
+  {
+    id: 5,
+    icon: male,
+    name: "Paolo Catalano",
+    text: (
+      <>
+        <MdFormatQuote className="icon" />
+        <i>
+          Ho fatto da modello per un trucco artistico a tema Horror. Il
+          risultato é stato davvero{" "}
+          <span style={{ fontVariant: "small-caps" }}>Terrificante</span> (😄)
+          quindi davvero ben riuscito! Costanza ha molto talento!!
+        </i>
+
         <MdFormatQuote className="icon" />
       </>
     ),

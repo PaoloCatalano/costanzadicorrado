@@ -17,7 +17,7 @@ const Hero = () => {
         <SliderHero />
         <div className="overlay">
           <div className="hero-title">Costanza Dicorrado</div>
-          <div style={{ margin: "1rem 0 3rem 0 " }}>Make Up Artist</div>
+          <div style={{ margin: "1rem 0 3rem 0 " }}>Make Up Artist </div>
           <a className="btn" href="#contatti" onClick={handleClick}>
             Contattami
           </a>
