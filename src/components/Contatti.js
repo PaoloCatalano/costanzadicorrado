@@ -33,7 +33,6 @@ const Contatti = () => {
       <section className="container-center">
         <Form />
         <VisitCard />
-
         <div className="contact-pics">
           {nodes.map(pic => {
             return (

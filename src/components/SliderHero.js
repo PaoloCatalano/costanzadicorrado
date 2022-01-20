@@ -5,24 +5,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const SliderHero = () => {
-  // const {
-  //   allFile: { nodes: pics },
-  // } = useStaticQuery(graphql`
-  //   {
-  //     allFile(filter: { relativePath: { regex: "/home/" } }) {
-  //       nodes {
-  //         sourceInstanceName
-  //         image: childImageSharp {
-  //           gatsbyImageData(
-  //             layout: FULL_WIDTH
-  //             quality: 100
-  //             placeholder: BLURRED
-  //           )
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
   const {
     allContentfulFotoHome: { nodes: pics },
   } = useStaticQuery(graphql`
@@ -56,7 +38,6 @@ const SliderHero = () => {
       interval={6000}
     >
       {pics.map((pic, index) => {
-        // const { image, sourceInstanceName } = pic
         const { image, ordine, titolo } = pic
         return (
           <div key={ordine}>

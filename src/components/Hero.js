@@ -18,12 +18,7 @@ const Hero = () => {
         <div className="overlay">
           <div className="hero-title">Make Up Artist </div>
           <div className="link-style hero-name">Costanza Dicorrado</div>
-          <a
-            className="btn"
-            style={{ padding: "1rem 1.5rem", textTransform: "uppercase" }}
-            href="#contatti"
-            onClick={handleClick}
-          >
+          <a className="btn big-margin" href="#contatti" onClick={handleClick}>
             Contattami
           </a>
         </div>

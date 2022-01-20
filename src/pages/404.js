@@ -1,16 +1,33 @@
 import React from "react"
 import { Link } from "gatsby"
-import Logo from "../components/Logo"
+import NavSpecial from "../components/NavSpecial"
+import Footer from "../components/Footer"
+import Title from "../components/Title"
+import Seo from "../components/Seo"
+
 const Error = () => {
   return (
-    <main className="second-page">
-      <Logo />
-      <h1>404 Error</h1>
-      <h3>La pagina che stai cercnando non esiste</h3>
-      <Link to="/" className="btn">
-        Torna a home
-      </Link>
-    </main>
+    <>
+      <Seo />
+      <NavSpecial />
+      <main
+        className="second-page"
+        style={{ gridTemplateRows: "auto 1fr auto" }}
+      >
+        <Title title="Pagina non trovata" />
+        <section style={{ height: "20vh" }}>
+          <h3>Questa pagina non esiste...</h3>
+        </section>
+        <div className="big-margin">
+          <Link to="/" className="btn big-margin">
+            Torna a home
+          </Link>
+        </div>
+      </main>
+      <footer style={{ width: "100vw", bottom: 0, position: "absolute" }}>
+        <Footer />
+      </footer>
+    </>
   )
 }
 

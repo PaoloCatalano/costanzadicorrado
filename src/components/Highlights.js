@@ -2,7 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-// import { fotoLavori } from "../assets/data/fotoLavori"
 
 const Highlights = () => {
   const {
@@ -30,19 +29,8 @@ const Highlights = () => {
   return (
     <>
       <div className="highlights">
-        {/* {pics.map((pic, index) => {
-          return (
-            <GatsbyImage
-              key={index}
-              image={getImage(pic.childImageSharp)}
-              style={{ height: "100%" }}
-              alt={pic.sourceInstanceName + " " + index}
-            />
-          )
-        })} */}
         {fotoLavori.map(({ ordine, titolo, foto }, index) => (
           <div key={ordine} className={`div-tile div-${index}`}>
-            {/* <img src={foto} alt={titolo} className="img-tile" /> */}
             <GatsbyImage
               image={getImage(foto.gatsbyImageData)}
               style={{ height: "100%" }}

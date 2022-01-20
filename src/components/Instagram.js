@@ -88,7 +88,6 @@ const Instagram = () => {
                 </div>
               </div>
             </a>
-            {/* <div className="footer-insta likes">Mi Piace</div> */}
             <div className="footer-insta caption">
               {caption.slice(0, 90)}...{" "}
               <span>

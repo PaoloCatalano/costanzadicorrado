@@ -16,15 +16,13 @@ const Lavori = ({ data }) => {
       <NavSpecial />
       <Seo title="I Lavori di Costanza Dicorrado" />
       <main className="second-page">
-        {/* <div className="container"> */}
         <Title title="I miei Lavori" />
         <AllLavori projects={nodes} />
         <div className="container">
-          <Link to="/" className="btn" style={{ padding: "1rem 1.5rem" }}>
+          <Link to="/" className="btn big-margin">
             Torna alla home
           </Link>
         </div>
-        {/* </div> */}
       </main>
       <Footer />
     </>

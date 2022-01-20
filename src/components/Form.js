@@ -3,9 +3,6 @@ import { useGlobalContext } from "../context/context"
 
 const Form = () => {
   const { cookieAccepted } = useGlobalContext()
-  // React.useEffect(() => {
-  //   console.log(cookieAccepted === "true" ? "Si" : "No")
-  // }, [cookieAccepted])
   return (
     <article className="contact-form">
       <form action="https://formspree.io/f/mpzkdgwo" method="POST">

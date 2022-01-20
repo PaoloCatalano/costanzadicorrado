@@ -1,8 +1,6 @@
 import React from "react"
 import Slider from "../components/SliderReview"
 import Title from "./Title"
-// import Brand from "./Brand"
-// import BrandSmall from "./BrandSmall"
 import Collaborazioni from "./Collaborazioni"
 
 const reviews = () => {
@@ -18,15 +16,6 @@ const reviews = () => {
         <Slider />
         <div style={{ height: "1rem", marginBottom: "9rem" }}></div>
         <Title title="Collaborazioni" />
-        {/* <div className="collab-4">
-          <BrandSmall />
-          <BrandSmall />
-          <BrandSmall />
-          <BrandSmall />
-        </div>
-        <div className="collab-1">
-          <Brand />
-        </div> */}
         <Collaborazioni />
       </div>
     </section>

@@ -12,7 +12,6 @@ const Servizi = () => {
         itemType="https://schema.org/LocalBusiness"
       >
         <meta itemProp="serviceType" content="Make Up Artist" />
-
         <Services />
       </div>
     </section>

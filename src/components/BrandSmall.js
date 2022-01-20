@@ -1,7 +1,6 @@
 import React from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
 import { Carousel } from "react-responsive-carousel"
-// import { brand } from "../assets/data/brand"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -50,7 +49,6 @@ const SliderBrands = () => {
           const { ordine, logo, titolo } = bra
           return (
             <div key={ordine} style={{ zIndex: 9999 }}>
-              {/* <img src={logo} alt={titolo} /> */}
               <GatsbyImage
                 image={getImage(logo)}
                 className="recipe-img "

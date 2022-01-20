@@ -19,7 +19,9 @@ export default function VisitCard() {
           <span>
             <IoIosMail className="icon" />
           </span>
-          <a href="mailto:costanzadic@gmail.com">costanzadic@gmail.com</a>
+          <a href="mailto:costanzadic@gmail.com" className="link-style-small">
+            costanzadic@gmail.com
+          </a>
         </div>
       </div>
     </article>

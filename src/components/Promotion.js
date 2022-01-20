@@ -1,11 +1,8 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import CookieConsent, { Cookies } from "react-cookie-consent"
-// import { useLocation } from "@reach/router" // this helps tracking the location
-// import { initializeAndTrack } from "gatsby-plugin-gdpr-cookies"
 import { useGlobalContext } from "../context/context"
 const Popup = () => {
-  //   const location = useLocation()
   const { setCookieAccepted } = useGlobalContext()
   const [email, setEmail] = React.useState("")
 
@@ -20,15 +17,12 @@ const Popup = () => {
       style={comStyle}
       contentStyle={{ margin: 0 }}
       buttonStyle={acceptButtonStyle}
-      expires={14}
+      expires={3}
       cookieName="promozione"
       flipButtons
       ariaAcceptLabel
       onAccept={() => {
         setCookieAccepted("true")
-        // Cookies.set("gatsby-gdpr-google-tagmanager", true)
-        // Cookies.set("gatsby-gdpr-google-analytics", true)
-        // initializeAndTrack(location)
       }}
       location="bottom"
       buttonText="Giá Iscritto"
@@ -43,8 +37,6 @@ const Popup = () => {
       }}
     >
       <div className="logo-cookie">
-        {/* Costanza Dicorrado
-        <div>make up artist</div> */}
         <StaticImage
           src="../assets/images/cdb.png"
           alt="Costanza Dicorrado Logo"
@@ -63,12 +55,16 @@ const Popup = () => {
             textTransform: "uppercase",
           }}
         >
-          <p style={{ fontSize: 15 }}>
+          <strong style={{ fontSize: 15 }}>
             Iscriviti subito per rimanere aggiornato
-          </p>
-          <strong>
-            Riceverai il <u>10% di sconto</u> sul tuo primo servizio makeup!
           </strong>
+          <p>
+            Riceverai il{" "}
+            <strong>
+              <u>10% di sconto</u>
+            </strong>{" "}
+            sul tuo primo servizio makeup!
+          </p>
         </div>
         <form
           action="https://formspree.io/f/mgerkjvn"
@@ -132,13 +128,8 @@ const acceptButtonStyle = {
   fontSize: "14px",
   fontWeight: "bold",
   border: "2px solid var(--green-dark)",
-  //   width: "90%",
-  //   height: "3rem",
 }
 const declineButtonStyle = {
-  //   padding: 5,
-  //   margin: 0,
-  //   textTransform: "lowercase",
   borderRadius: 4,
   backgroundColor: "#fff",
   color: "var(--red-dark)",
