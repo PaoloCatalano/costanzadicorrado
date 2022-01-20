@@ -27,8 +27,8 @@ const Projects = ({ projects: data = [] }) => {
 
           return (
             <article key={ordine}>
-              <div className="categoria-info">{categoria}</div>
-              <div style={{ position: "relative" }}>
+              <div className="categoria-info link-style">{categoria}</div>
+              <div className="foto-lavoro">
                 <GatsbyImage
                   image={getImage(foto.gatsbyImageData)}
                   alt={`Costanza Dicorrado ha truccato ${titolo}, categoria trucco: ${categoria}`}

@@ -31,11 +31,11 @@ const Popup = () => {
         // initializeAndTrack(location)
       }}
       location="bottom"
-      buttonText="Iscrizione giá fatta"
+      buttonText="Giá Iscritto"
       sameSite="none"
       cookieSecurity
       enableDeclineButton
-      declineButtonText="Non mi interessa"
+      declineButtonText="Piú Tardi"
       ariaDeclineLabel
       declineButtonStyle={declineButtonStyle}
       onDecline={() => {
@@ -70,7 +70,11 @@ const Popup = () => {
             Riceverai il <u>10% di sconto</u> sul tuo primo servizio makeup!
           </strong>
         </div>
-        <form action="https://formspree.io/f/mgerkjvn" method="POST">
+        <form
+          action="https://formspree.io/f/mgerkjvn"
+          method="POST"
+          className="promotion-form"
+        >
           <input
             type="hidden"
             readOnly
@@ -119,7 +123,6 @@ const comStyle = {
   display: "grid",
   grid: "auto auto / 1fr",
   border: "2px solid var(--primary-0)",
-  // textTransform="none"
 }
 const acceptButtonStyle = {
   borderRadius: 4,

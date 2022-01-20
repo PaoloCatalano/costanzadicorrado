@@ -7,63 +7,38 @@ import { FiSend, FiMessageCircle } from "react-icons/fi"
 import { FaInstagram } from "react-icons/fa"
 
 const Instagram = () => {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     allInstaNode(limit: 3, sort: { fields: timestamp, order: DESC }) {
-  //       nodes {
-  //         id
-  //         caption
-  //         likes
-  //         comments
-  //         localFile {
-  //           childImageSharp {
-  //             gatsbyImageData(
-  //               placeholder: DOMINANT_COLOR
-  //               quality: 100
-  //               layout: CONSTRAINED
-  //               aspectRatio: 0.8
-  //             )
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
   const data = useStaticQuery(graphql`
     {
-      allInstagramContent(limit: 3, sort: { fields: timestamp, order: DESC }) {
+      allContentfulInstagram(sort: { fields: ordine, order: ASC }) {
         nodes {
-          id
           permalink
-          caption
-          localImage {
-            childImageSharp {
-              gatsbyImageData(
-                placeholder: DOMINANT_COLOR
-                quality: 100
-                layout: CONSTRAINED
-                aspectRatio: 0.8
-              )
-            }
+          caption {
+            caption
+          }
+          image {
+            gatsbyImageData(
+              placeholder: DOMINANT_COLOR
+              quality: 100
+              layout: CONSTRAINED
+              aspectRatio: 0.8
+            )
           }
         }
       }
     }
   `)
+
   return (
     <div className="instagram">
-      {data.allInstagramContent.nodes.map(post => {
+      {data.allContentfulInstagram.nodes.map(post => {
         const {
-          // likes,
-          // comments,
-          id,
-          caption,
+          caption: { caption },
           permalink,
-          localImage: { childImageSharp },
+          image,
         } = post
-        console.log(permalink)
+
         return (
-          <div className="card-insta" key={id}>
+          <div className="card-insta" key={permalink}>
             <div className="title-insta">
               <FaInstagram />
               <div>
@@ -80,13 +55,13 @@ const Instagram = () => {
               </div>
             </div>
             <a
-              href={permalink}
+              href={`https://www.instagram.com/p/${permalink}/`}
               rel="noreferrer"
               target="_blank"
               className="post"
             >
               <GatsbyImage
-                image={getImage(childImageSharp)}
+                image={getImage(image)}
                 className="insta-img "
                 alt={caption}
               />
@@ -118,10 +93,9 @@ const Instagram = () => {
               {caption.slice(0, 90)}...{" "}
               <span>
                 <a
-                  href={permalink}
+                  href={`https://www.instagram.com/p/${permalink}/`}
                   rel="noreferrer"
                   target="_blank"
-                  key={id}
                   className="post"
                 >
                   continua a leggere
@@ -129,10 +103,9 @@ const Instagram = () => {
               </span>
             </div>
             <a
-              href={permalink}
+              href={`https://www.instagram.com/p/${permalink}/`}
               rel="noreferrer"
               target="_blank"
-              key={id}
               className="post"
             >
               <div className="footer-insta comments">Vedi tutti i commenti</div>
@@ -150,9 +123,3 @@ const Instagram = () => {
 }
 
 export default Instagram
-
-// import React from "react"
-
-// export default function Instagram() {
-//   return <div style={{ color: "transparent" }}>.</div>
-// }

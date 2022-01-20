@@ -16,9 +16,14 @@ const Hero = () => {
       <div className="container-center" style={{ position: "relative" }}>
         <SliderHero />
         <div className="overlay">
-          <div className="hero-title">Costanza Dicorrado</div>
-          <div style={{ margin: "1rem 0 3rem 0 " }}>Make Up Artist </div>
-          <a className="btn" href="#contatti" onClick={handleClick}>
+          <div className="hero-title">Make Up Artist </div>
+          <div className="link-style hero-name">Costanza Dicorrado</div>
+          <a
+            className="btn"
+            style={{ padding: "1rem 1.5rem", textTransform: "uppercase" }}
+            href="#contatti"
+            onClick={handleClick}
+          >
             Contattami
           </a>
         </div>

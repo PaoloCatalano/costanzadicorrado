@@ -20,7 +20,7 @@ const Lavori = ({ data }) => {
         <Title title="I miei Lavori" />
         <AllLavori projects={nodes} />
         <div className="container">
-          <Link to="/" className="btn">
+          <Link to="/" className="btn" style={{ padding: "1rem 1.5rem" }}>
             Torna alla home
           </Link>
         </div>

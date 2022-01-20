@@ -11,10 +11,16 @@ const Lavori = () => {
         <Highlights />
 
         <div className="contenitore-insta" style={{ marginTop: "5rem" }}>
-          <h4 style={{ textTransform: "uppercase", marginBottom: "3rem" }}>
+          <h4
+            style={{
+              textTransform: "uppercase",
+              marginBottom: "3rem",
+              textAlign: "center",
+            }}
+          >
             guarda i miei ultimi lavori su{" "}
             <a
-              style={{ textDecoration: "underline" }}
+              className="link-style"
               href="https://www.instagram.com/costanzadicorrado_mua/"
               target="_blank"
               rel="noopener noreferrer"

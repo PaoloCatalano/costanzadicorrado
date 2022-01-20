@@ -22,9 +22,11 @@ export default function Collaborazioni() {
       }
     }
   `)
+
   return (
     <>
-      <div className="classs">
+      <div className="overflow-scroll">
+        <div className="overlay-collaborazioni"></div>
         <div className="contenitore-brand">
           {brand.map((b, i) => (
             <div key={i} style={{ margin: "0 1rem" }}>

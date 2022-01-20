@@ -12,6 +12,7 @@ const HamburgerBtn = () => {
         zIndex: 9999,
         position: "absolute",
         right: 0,
+        top: 13,
       }}
       id="nav-icon4"
       className={showLinks ? "open" : ""}

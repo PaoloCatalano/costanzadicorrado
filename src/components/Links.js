@@ -38,7 +38,6 @@ const Links = ({ handleClick, styleClass }) => {
     window.addEventListener("scroll", event)
     return () => {
       window.removeEventListener("scroll", event)
-      console.log("rimosso?", event)
     }
 
     // eslint-disable-next-line

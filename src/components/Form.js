@@ -3,9 +3,9 @@ import { useGlobalContext } from "../context/context"
 
 const Form = () => {
   const { cookieAccepted } = useGlobalContext()
-  React.useEffect(() => {
-    console.log(cookieAccepted === "true" ? "Si" : "No")
-  }, [cookieAccepted])
+  // React.useEffect(() => {
+  //   console.log(cookieAccepted === "true" ? "Si" : "No")
+  // }, [cookieAccepted])
   return (
     <article className="contact-form">
       <form action="https://formspree.io/f/mpzkdgwo" method="POST">
@@ -21,7 +21,7 @@ const Form = () => {
           <input type="email" name="email" placeholder="Email *" />
           <textarea
             name="message"
-            rows="5"
+            rows="3"
             placeholder="Messaggio *"
           ></textarea>
         </div>
@@ -33,7 +33,7 @@ const Form = () => {
               marginTop: "1rem",
             }}
           >
-            Invia Richiesta
+            Invia
           </button>
         </div>
       </form>
