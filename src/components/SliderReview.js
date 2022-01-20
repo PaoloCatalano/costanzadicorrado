@@ -16,8 +16,6 @@ const SliderReview = () => {
       swipeScrollTolerance={100}
       width="100%"
       interval={6000}
-      // transitionTime={3000}
-      // stopOnHover
     >
       {reviews.map(review => {
         const { id, icon, name, text } = review

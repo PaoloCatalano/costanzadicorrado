@@ -28,12 +28,12 @@ export default function Collaborazioni() {
       <div className="overflow-scroll">
         <div className="overlay-collaborazioni"></div>
         <div className="contenitore-brand">
-          {brand.map((b, i) => (
-            <div key={i} style={{ margin: "0 1rem" }}>
+          {brand.map(b => (
+            <div key={b.titolo + b.ordine} style={{ margin: "0 1rem" }}>
               <GatsbyImage
                 image={getImage(b.logo)}
                 className="brand-img"
-                alt={b.titolo + " " + b.ordine}
+                alt={b.titolo + " collabora con Costanza Dicorrado. "}
               />
             </div>
           ))}

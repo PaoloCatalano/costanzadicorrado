@@ -1,5 +1,5 @@
 import React from "react"
-import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.css" // requires a loader
 import { Carousel } from "react-responsive-carousel"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -36,6 +36,7 @@ const SliderHero = () => {
       infiniteLoop
       autoPlay
       interval={6000}
+      stopOnHover={false}
     >
       {pics.map((pic, index) => {
         const { image, ordine, titolo } = pic

@@ -978,6 +978,14 @@ Sidebar Animation
 .carousel-root {
   width: 100% !important;
 }
+.carousel.carousel-slider {
+  opacity: 0.9 !important;
+  cursor: grab !important;
+}
+.carousel.carousel-slider:hover {
+  opacity: 0.9 !important;
+}
+
 #home .container-center {
   width: 100vw;
   margin: 0;
