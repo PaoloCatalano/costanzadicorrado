@@ -333,6 +333,10 @@ table {
   background-color: var(--primary-100);
 }
 
+::selection {
+  background: var(--primary-0-transparent);
+}
+
 body {
   background: var(--primary-50);
   color: var(--primary-900);
