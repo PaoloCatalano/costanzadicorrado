@@ -42,7 +42,7 @@ const Instagram = () => {
         guarda i miei ultimi lavori su{" "}
         <a
           className="link-style"
-          href={instaAccount}
+          href={instaAccount.link}
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -1152,6 +1152,7 @@ Sidebar Animation
   padding: 2rem;
   box-shadow: inset var(--shadow-inset);
   margin: auto;
+  background-color: var(--white);
 }
 .correct-mail-icon span {
   display: grid;
@@ -1159,7 +1160,7 @@ Sidebar Animation
 }
 .media-flex-col {
   gap: 1rem;
-  margin-left: 1rem;
+  margin-left: 0.2rem;
 }
 @media screen and (max-width: 922px) {
   .media-flex-col {
@@ -1651,11 +1652,10 @@ popup
 
   /* cover the entire descender */
   text-decoration-thickness: 10px;
-  text-underline-offset: -10px;
 }
 .link-style:hover {
-  text-decoration-thickness: 30px;
-  text-underline-offset: -40px;
+  text-decoration-color: var(--primary-0-hover);
+  transition: var(--transition);
 }
 .link-style-small {
   text-decoration: underline;
@@ -1665,11 +1665,10 @@ popup
   text-decoration-skip-ink: none;
 
   text-decoration-thickness: 5px;
-  text-underline-offset: -3px;
 }
 .link-style-small:hover {
-  text-decoration-thickness: 18px;
-  text-underline-offset: -22px;
+  text-decoration-color: var(--primary-0-hover);
+  transition: var(--transition);
 }
 .big-margin {
   padding: 1rem 1.5rem;

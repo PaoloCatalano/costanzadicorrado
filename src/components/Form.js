@@ -13,14 +13,10 @@ const Form = () => {
             name="interesse per la newsletter + sconto?"
             value={cookieAccepted === "true" ? "Si" : "No"}
           />
-          <input type="hidden" name="_language" value="it" />
+          <input type="hidden" name="_language" value="it" required />
           <input type="text" name="name" placeholder="Nome *" />
-          <input type="email" name="email" placeholder="Email *" />
-          <textarea
-            name="message"
-            rows="3"
-            placeholder="Messaggio *"
-          ></textarea>
+          <input type="email" name="email" placeholder="Email *" required />
+          <textarea name="message" rows="3" placeholder="Messaggio"></textarea>
         </div>
         <div className="form-button">
           <button
